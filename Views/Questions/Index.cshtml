@@ -1,0 +1,71 @@
+﻿@model DiscussTechPanel.ViewModels.QuestionAnswerViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <h1>QUESTIONS</h1>
+        <hr />
+       
+        @foreach (var question in Model.Questions)
+        {
+            <div class="bg-dark text-white p-2 rounded-sm">
+                @Html.DisplayFor(modelItem => question.Content)
+                <span class="pl-4" onclick="check()">
+                    <a asp-action="Edit" asp-route-id="@question.Id">Edit</a>  |
+                    <a asp-action="Delete" asp-route-id="@question.Id">Delete</a>
+                </span>
+                |<a asp-controller="Answers" asp-action="create" asp-route-id="@question.Id">answer</a>
+            </div>
+            <div class="p-4">
+                <p>Answers</p>
+                @Html.DisplayFor(modelItem => Model.Answers[0].Content)
+            </div>
+
+        }
+        <hr />
+
+        
+    </div>
+</div>
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SecretCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                   
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SecretCode)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@
+
+<script>
+    function check() {
+        var sc = prompt("enter secret code");
+        return sc;
+    }
+</script>

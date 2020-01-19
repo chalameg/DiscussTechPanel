@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191214193643_first.cs" />
+    <Compile Remove="Migrations\20191214193643_first.Designer.cs" />
+    <Compile Remove="Migrations\20191215184804_second.cs" />
+    <Compile Remove="Migrations\20191215184804_second.Designer.cs" />
+    <Compile Remove="Migrations\20191215195922_first migration.cs" />
+    <Compile Remove="Migrations\20191215195922_first migration.Designer.cs" />
+    <Compile Remove="Migrations\20200103111906_second migration.cs" />
+    <Compile Remove="Migrations\20200103111906_second migration.Designer.cs" />
+    <Compile Remove="Migrations\20200103112105_first-migration.cs" />
+    <Compile Remove="Migrations\20200103112105_first-migration.Designer.cs" />
+    <Compile Remove="Migrations\20200103112347_first-migration.cs" />
+    <Compile Remove="Migrations\20200103112347_first-migration.Designer.cs" />
+    <Compile Remove="Migrations\20200103225050_sda.cs" />
+    <Compile Remove="Migrations\20200103225050_sda.Designer.cs" />
+    <Compile Remove="Migrations\20200104231447_add userrole class.cs" />
+    <Compile Remove="Migrations\20200104231447_add userrole class.Designer.cs" />
+    <Compile Remove="Migrations\20200106124027_third migration.cs" />
+    <Compile Remove="Migrations\20200106124027_third migration.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.CookiePolicy" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="MySQL.Data.Entities" Version="6.8.3" />
+    <PackageReference Include="MySql.Data.Entity" Version="6.10.9" />
+    <PackageReference Include="Oracle.EntityFrameworkCore" Version="2.19.60" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+</Project>
